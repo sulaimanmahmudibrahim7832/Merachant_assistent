@@ -1,0 +1,735 @@
+        /* =========================
+           RESET
+        ========================== */
+
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #172033;
+            min-height: 100vh;
+        }
+
+
+        button,
+        a {
+            font: inherit;
+        }
+
+
+
+
+        /* =========================
+           GLOBAL HEADER
+        ========================== */
+
+
+        .header {
+            height: 64px;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+
+            padding: 0 20px;
+
+
+            position: sticky;
+            top: 0;
+            z-index: 900;
+        }
+
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+
+        .menu-open {
+            border: none;
+            background: transparent;
+
+
+            font-size: 28px;
+            cursor: pointer;
+
+
+            width: 42px;
+            height: 42px;
+
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .header-title {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+
+        .notification {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 22px;
+        }
+
+
+        .quick-settings {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+
+
+            font-size: 26px;
+
+
+            width: 40px;
+            height: 40px;
+        }
+
+
+
+
+        /* =========================
+           DRAWER
+        ========================== */
+
+
+        .menu-drawer {
+            position: fixed;
+
+
+            top: 0;
+            left: 0;
+
+
+            width: min(320px, 85vw);
+            height: 100vh;
+
+
+            background: #0e172b;
+            color: white;
+
+
+            z-index: 1100;
+
+
+            display: flex;
+            flex-direction: column;
+
+
+            transform: translateX(-100%);
+            transition: transform 0.25s ease;
+
+
+            box-shadow: 8px 0 25px rgba(0, 0, 0, 0.15);
+        }
+
+
+        .menu-drawer.open {
+            transform: translateX(0);
+        }
+
+
+
+
+        /* =========================
+           DRAWER HEADER
+        ========================== */
+
+
+        .drawer-header {
+            min-height: 80px;
+
+
+            padding: 0 22px;
+
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+
+        .brand-icon {
+            width: 40px;
+            height: 40px;
+
+
+            border-radius: 50%;
+
+
+            background: #2474ff;
+
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            font-size: 18px;
+        }
+
+
+        .brand-name {
+            font-size: 21px;
+            font-weight: 700;
+        }
+
+
+        .drawer-close {
+            border: none;
+            background: transparent;
+
+
+            color: #9aa7bd;
+
+
+            font-size: 32px;
+            line-height: 1;
+
+
+            cursor: pointer;
+
+
+            width: 40px;
+            height: 40px;
+        }
+
+
+        .drawer-close:hover {
+            color: white;
+        }
+
+
+
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+
+        .drawer-navigation {
+            padding: 30px 16px;
+
+
+            flex: 1;
+
+
+            overflow-y: auto;
+        }
+
+
+        .menu-title {
+            color: #66748d;
+
+
+            font-size: 13px;
+            font-weight: 700;
+
+
+            letter-spacing: 1.5px;
+
+
+            padding: 0 16px 15px;
+        }
+
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+
+
+            gap: 16px;
+
+
+            width: 100%;
+
+
+            padding: 15px 16px;
+
+
+            margin-bottom: 5px;
+
+
+            border-radius: 12px;
+
+
+            color: #9eacc3;
+
+
+            text-decoration: none;
+
+
+            font-size: 16px;
+            font-weight: 600;
+
+
+            transition:
+                background 0.2s ease,
+                color 0.2s ease;
+        }
+
+
+        .menu-item:hover {
+            background: rgba(255, 255, 255, 0.06);
+            color: white;
+        }
+
+
+        .menu-item.active {
+            background: #2474ff;
+            color: white;
+        }
+
+
+        .menu-icon {
+            width: 24px;
+
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            font-size: 21px;
+        }
+
+
+
+
+        /* =========================
+           USER SECTION
+        ========================== */
+
+
+        .drawer-user {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+
+            padding: 22px 20px;
+        }
+
+
+        .user-information {
+            display: flex;
+            align-items: center;
+
+
+            gap: 12px;
+
+
+            margin-bottom: 20px;
+        }
+
+
+        .user-avatar {
+            width: 44px;
+            height: 44px;
+
+
+            flex-shrink: 0;
+
+
+            border-radius: 50%;
+
+
+            background: #2474ff;
+
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            font-weight: 700;
+        }
+
+
+        .user-details {
+            display: flex;
+            flex-direction: column;
+
+
+            gap: 4px;
+        }
+
+
+        .user-details strong {
+            font-size: 15px;
+        }
+
+
+        .user-details span {
+            color: #8c9ab2;
+            font-size: 13px;
+        }
+
+
+        .sign-out {
+            width: 100%;
+
+
+            display: flex;
+            align-items: center;
+
+
+            gap: 16px;
+
+
+            padding: 12px 8px;
+
+
+            border: none;
+            background: transparent;
+
+
+            color: #9eacc3;
+
+
+            cursor: pointer;
+
+
+            text-align: left;
+        }
+
+
+        .sign-out:hover {
+            color: white;
+        }
+
+
+
+
+        /* =========================
+           OVERLAY
+        ========================== */
+
+
+        .drawer-overlay {
+            position: fixed;
+
+
+            inset: 0;
+
+
+            background: rgba(0, 0, 0, 0.45);
+
+
+            z-index: 1000;
+
+
+            opacity: 0;
+            visibility: hidden;
+
+
+            transition:
+                opacity 0.25s ease,
+                visibility 0.25s ease;
+        }
+
+
+        .drawer-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================== */
+
+
+        .main {
+            width: 100%;
+            max-width: 1200px;
+
+
+            margin: 0 auto;
+
+
+            padding: 24px 20px;
+        }
+
+
+        .page-card {
+            background: white;
+
+
+            border-radius: 16px;
+
+
+            padding: 25px;
+
+
+            border: 1px solid #e5e7eb;
+        }
+
+
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+
+        @media (min-width: 900px) {
+
+
+            /*
+             * On larger screens the drawer remains visible.
+             * The same component becomes a sidebar.
+             */
+
+
+            .menu-drawer {
+                transform: translateX(0);
+            }
+
+
+            .drawer-overlay {
+                display: none;
+            }
+
+
+            .menu-open {
+                display: none;
+            }
+
+
+            .header {
+                margin-left: 320px;
+            }
+
+
+            .main {
+                margin-left: 320px;
+                max-width: none;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+
+            .header {
+                padding: 0 14px;
+            }
+
+
+            .header-title {
+                font-size: 18px;
+            }
+
+
+            .main {
+                padding: 16px 12px;
+            }
+
+
+            .page-card {
+                padding: 18px;
+            }
+        }
+
+
+
+            /* =========================
+       QUICK MENU CONTAINER
+    ========================== */
+
+    .quick-menu {
+        position: relative;
+        display: inline-block;
+    }
+
+
+    /* =========================
+       THREE DOT BUTTON
+    ========================== */
+
+    .quick-menu-button {
+
+        width: 42px;
+        height: 42px;
+
+        border: none;
+        background: transparent;
+
+        border-radius: 50%;
+
+        font-size: 28px;
+        line-height: 1;
+
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+
+    .quick-menu-button:hover {
+
+        background: #f1f3f6;
+
+    }
+
+
+    /* =========================
+       MENU CONTENT
+    ========================== */
+
+    .quick-menu-content {
+
+        position: absolute;
+
+        top: calc(100% + 8px);
+        right: 0;
+
+        width: 230px;
+
+        background: white;
+
+        border: 1px solid #e5e7eb;
+
+        border-radius: 12px;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+        padding: 8px;
+
+        z-index: 1200;
+
+        display: none;
+
+    }
+
+
+    .quick-menu-content.show {
+
+        display: block;
+
+    }
+
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    .quick-menu-header {
+
+        padding: 12px;
+
+        font-size: 14px;
+
+        color: #172033;
+
+    }
+
+
+    /* =========================
+       MENU ITEMS
+    ========================== */
+
+    .quick-menu-item {
+
+        width: 100%;
+
+        min-height: 44px;
+
+        padding: 10px 12px;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+        border: none;
+
+        background: transparent;
+
+        border-radius: 8px;
+
+        color: #374151;
+
+        text-decoration: none;
+
+        cursor: pointer;
+
+        text-align: left;
+
+        font-size: 14px;
+
+    }
+
+
+    .quick-menu-item:hover {
+
+        background: #f4f6f8;
+
+    }
+
+
+    /* =========================
+       DIVIDER
+    ========================== */
+
+    .quick-menu-divider {
+
+        height: 1px;
+
+        background: #e5e7eb;
+
+        margin: 6px 0;
+
+    }
+
+
+    /* =========================
+       SIGN OUT
+    ========================== */
+
+    .quick-menu-item.sign-out {
+
+        color: #b42318;
+
+    }

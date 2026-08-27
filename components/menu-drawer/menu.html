@@ -1,1 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>PITMS</title>
+  <link rel="stylesheet" href="menu.css">
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         GLOBAL HEADER
+    ================================== -->
+
+    <header class="header">
+
+        <div class="header-left">
+
+            <button
+                class="menu-open"
+                id="menuOpen"
+                aria-label="Open menu">
+
+                ☰
+
+            </button>
+
+            <h1 class="header-title">
+                PITMS
+            </h1>
+
+        </div>
+
+
+        <div class="header-right">
+
+            <button
+                class="notification"
+                aria-label="Notifications">
+
+                ♧
+
+            </button>
+             <button
+                class="quick-menu-button"
+                id="quickMenuButton"
+                aria-label="Open quick settings"
+                aria-expanded="false">
+                ⋮
+          </button>
+              <!-- 3-Dot Quick Settings -->
+
+
+                <div class="quick-menu">
+                
+                
+                
+                
+                    <div
+                        class="quick-menu-content"
+                        id="quickMenuContent">
+                
+                
+                        <div class="quick-menu-header">
+                            <strong>Quick Settings</strong>
+                        </div>
+                    
+                    
+                    
+                    
+                        <a href="profile.html" class="quick-menu-item">
+                            <span>👤</span>
+                            <span>Profile</span>
+                        </a>
+                    
+                    
+                    
+                    
+                        <a href="account.html" class="quick-menu-item">
+                            <span>⚙</span>
+                            <span>Account</span>
+                        </a>
+                    
+                    
+                    
+                    
+                        <a href="settings.html" class="quick-menu-item">
+                            <span>☷</span>
+                            <span>System Settings</span>
+                        </a>
+                    
+                    
+                    
+                    
+                        <div class="quick-menu-divider"></div>
+                    
+                    
+                    
+                    
+                        <button
+                            type="button"
+                            class="quick-menu-item sign-out"
+                            id="quickSignOut">
+                    
+                    
+                            <span>→</span>
+                            <span>Sign out</span>
+                    
+                    
+                        </button>
+                    
+                    
+                    </div>
+                
+                
+                </div>
+
+
+                <div
+                    class="drawer-overlay"
+                    id="drawerOverlay">
+                </div>
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================
+         MENU DRAWER
+    ================================== -->
+
+    <aside
+        class="menu-drawer"
+        id="menuDrawer">
+
+
+        <!-- Drawer Header -->
+
+        <div class="drawer-header">
+
+            <div class="brand">
+
+                <span class="brand-icon">
+                    ◆
+                </span>
+
+                <span class="brand-name">
+                    PITMS
+                </span>
+
+            </div>
+
+
+            <button
+                class="drawer-close"
+                id="drawerClose"
+                aria-label="Close menu">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+
+        <!-- Navigation -->
+
+        <nav class="drawer-navigation">
+
+            <p class="menu-title">
+                MENU
+            </p>
+
+
+            <a
+                href="../../frontend/pages/dashboard.html"
+                class="menu-item active">
+
+                <span class="menu-icon">
+                    ▦
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="../../frontend/pages/products.html"
+                class="menu-item">
+
+                <span class="menu-icon">
+                    ◇
+                </span>
+
+                <span>
+                    Product Records
+                </span>
+
+            </a>
+
+
+            <a
+                href="../../frontend/pages/import.html"
+                class="menu-item">
+
+                <span class="menu-icon">
+                    ↑
+                </span>
+
+                <span>
+                    Import
+                </span>
+
+            </a>
+
+
+            <a
+                href="../../frontend/pages/export.html"
+                class="menu-item">
+
+                <span class="menu-icon">
+                    ↓
+                </span>
+
+                <span>
+                    Export
+                </span>
+
+            </a>
+
+
+            <a
+                href="../../frontend/pages/tracking.html"
+                class="menu-item">
+
+                <span class="menu-icon">
+                    ◎
+                </span>
+
+                <span>
+                    Tracking
+                </span>
+
+            </a>
+
+
+            <a
+                href="history.html"
+                class="menu-item">
+
+                <span class="menu-icon">
+                    ↶
+                </span>
+
+                <span>
+                    History
+                </span>
+
+            </a>
+
+        </nav>
+
+
+
+        <!-- User -->
+
+        <div class="drawer-user">
+
+            <div class="user-information">
+
+                <div class="user-avatar">
+                    TAD
+                </div>
+
+                <div class="user-details">
+
+                    <strong>
+                        Tahir AbdulKadir Danwawo
+                    </strong>
+
+                    <span>
+                        Administrator
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="sign-out"
+                id="signOut">
+
+                <span class="menu-icon">
+                    →
+                </span>
+
+                <span>
+                    Sign out
+                </span>
+
+            </button>
+
+        </div>
+        
+
+    </aside>
+
+
+
+    <!-- =================================
+         OVERLAY
+    ================================== -->
+
+
+
+    <!-- =================================
+         TEMPORARY PAGE CONTENT
+    ================================== -->
+
+    <main class="main">
+
+        <section class="page-card">
+
+            <h2>
+                System Overview
+            </h2>
+
+            <br>
+
+            <p>
+                PITMS dashboard content will be placed here.
+            </p>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script src="menu.js">    </script>
+
+</body>
