@@ -1,11 +1,414 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PITMS Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
 </head>
+
 <body>
-   
+
+    <main class="dashboard">
+
+        <!-- PAGE HEADER -->
+
+        <section class="dashboard-header">
+
+            <div>
+                <p class="page-label">PITMS</p>
+
+                <h1>System Overview</h1>
+
+                <p class="page-description">
+                    Overview of your product records and movement.
+                </p>
+            </div>
+
+            <div class="dashboard-date">
+                <span>Today</span>
+                <strong id="currentDate"></strong>
+            </div>
+
+        </section>
+
+
+        <!-- DASHBOARD CARDS -->
+
+        <section class="dashboard-cards">
+
+
+            <!-- PRODUCTS CARD -->
+
+            <article class="dashboard-card products-card">
+
+                <div class="card-header">
+
+                    <div class="card-title">
+
+                        <span class="card-icon">
+                            ▦
+                        </span>
+
+                        <div>
+                            <h2>Products</h2>
+
+                            <p>
+                                Current product records
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="card-menu"
+                        type="button"
+                        aria-label="Product card options">
+
+                        ⋮
+
+                    </button>
+
+                </div>
+
+
+                <div class="main-stat">
+
+                    <span class="stat-label">
+                        Total Products
+                    </span>
+
+                    <strong
+                        class="stat-value"
+                        id="totalProducts">
+
+                        245
+
+                    </strong>
+
+                </div>
+
+
+                <div class="stat-grid">
+
+                    <div class="stat-box">
+
+                        <span>
+                            In Stock
+                        </span>
+
+                        <strong id="stockQuantity">
+                            1,280
+                        </strong>
+
+                    </div>
+
+
+                    <div class="stat-box">
+
+                        <span>
+                            Low Stock
+                        </span>
+
+                        <strong id="lowStock">
+                            18
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card-footer">
+
+                    <a
+                        href="products.html"
+                        class="card-link">
+
+                        View Product Records →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TRACKING CARD -->
+
+            <article class="dashboard-card tracking-card">
+
+                <div class="card-header">
+
+                    <div class="card-title">
+
+                        <span class="card-icon">
+                            ◎
+                        </span>
+
+                        <div>
+
+                            <h2>Tracking</h2>
+
+                            <p>
+                                Product movement
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <select
+                        id="trackingPeriod"
+                        class="period-selector">
+
+                        <option value="daily">
+                            Daily
+                        </option>
+
+                        <option
+                            value="weekly"
+                            selected>
+
+                            Weekly
+
+                        </option>
+
+                        <option value="monthly">
+                            Monthly
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="tracking-summary">
+
+                    <div class="tracking-item">
+
+                        <div class="tracking-label">
+
+                            <span class="movement-icon import">
+                                ↑
+                            </span>
+
+                            <span>
+                                Import
+                            </span>
+
+                        </div>
+
+                        <strong id="importCount">
+                            125
+                        </strong>
+
+                    </div>
+
+
+                    <div class="tracking-item">
+
+                        <div class="tracking-label">
+
+                            <span class="movement-icon export">
+                                ↓
+                            </span>
+
+                            <span>
+                                Export
+                            </span>
+
+                        </div>
+
+                        <strong id="exportCount">
+                            83
+                        </strong>
+
+                    </div>
+
+
+                    <div class="tracking-item total-movement">
+
+                        <span>
+                            Net Movement
+                        </span>
+
+                        <strong id="netMovement">
+                            +42
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card-footer">
+
+                    <a
+                        href="tracking.html"
+                        class="card-link">
+
+                        View Tracking →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- HISTORY CARD -->
+
+            <article class="dashboard-card history-card">
+
+                <div class="card-header">
+
+                    <div class="card-title">
+
+                        <span class="card-icon">
+                            ↶
+                        </span>
+
+                        <div>
+
+                            <h2>History</h2>
+
+                            <p>
+                                Recent import and export records
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="card-menu"
+                        type="button"
+                        aria-label="History options">
+
+                        ⋮
+
+                    </button>
+
+                </div>
+
+
+                <div class="activity-list">
+
+
+                    <!-- IMPORT -->
+
+                    <div class="activity-item">
+
+                        <span class="activity-icon import">
+                            ↑
+                        </span>
+
+                        <div class="activity-details">
+
+                            <strong>
+                                Import
+                            </strong>
+
+                            <span>
+                                Product A · 50 units
+                            </span>
+
+                        </div>
+
+                        <time>
+                            Today
+                        </time>
+
+                    </div>
+
+
+                    <!-- EXPORT -->
+
+                    <div class="activity-item">
+
+                        <span class="activity-icon export">
+                            ↓
+                        </span>
+
+                        <div class="activity-details">
+
+                            <strong>
+                                Export
+                            </strong>
+
+                            <span>
+                                Product B · 20 units
+                            </span>
+
+                        </div>
+
+                        <time>
+                            Yesterday
+                        </time>
+
+                    </div>
+
+
+                    <!-- IMPORT -->
+
+                    <div class="activity-item">
+
+                        <span class="activity-icon import">
+                            ↑
+                        </span>
+
+                        <div class="activity-details">
+
+                            <strong>
+                                Import
+                            </strong>
+
+                            <span>
+                                Product C · 35 units
+                            </span>
+
+                        </div>
+
+                        <time>
+                            2 days ago
+                        </time>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card-footer">
+
+                    <a
+                        href="history.html"
+                        class="card-link">
+
+                        View Full History →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+    </main>
+
+
+    <script src="dashboard.js"></script>
+
 </body>
+
 </html>
