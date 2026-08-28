@@ -1,0 +1,676 @@
+* {
+  
+  box-sizing: border-box;
+  
+  margin: 0;
+  
+  padding: 0;
+
+
+}
+
+
+body {
+
+
+font-family: Arial, sans-serif;
+
+
+background: #f5f7fb;
+
+
+color: #172033;
+
+
+min-height: 100vh;
+
+
+}
+
+
+.page-container {
+
+
+width: 100%;
+
+
+max-width: 1000px;
+
+
+margin: 0 auto;
+
+
+padding: 24px 20px;
+
+
+}
+
+
+/* =========================
+PAGE HEADER
+========================= */
+
+
+.page-header {
+
+
+margin-bottom: 24px;
+
+
+}
+
+
+.page-label {
+
+
+font-size: 13px;
+
+
+font-weight: 700;
+
+
+letter-spacing: 1px;
+
+
+margin-bottom: 6px;
+
+
+}
+
+
+.page-header h1 {
+
+
+font-size: clamp(
+    1.5rem,
+    4vw,
+    2rem
+);
+
+
+margin-bottom: 6px;
+
+
+}
+
+
+.page-description {
+
+
+color: #667085;
+
+
+font-size: 14px;
+
+
+}
+
+
+/* =========================
+SETTINGS SECTIONS
+========================= */
+
+
+.settings-section {
+
+
+background: white;
+
+
+border: 1px solid #e5e7eb;
+
+
+border-radius: 14px;
+
+
+overflow: hidden;
+
+
+margin-bottom: 20px;
+
+
+}
+
+
+.section-heading {
+
+
+padding: 18px 20px;
+
+
+border-bottom: 1px solid #e5e7eb;
+
+
+}
+
+
+.section-heading h2 {
+
+
+font-size: 17px;
+
+
+margin-bottom: 4px;
+
+
+}
+
+
+.section-heading p {
+
+
+color: #667085;
+
+
+font-size: 12px;
+
+
+}
+
+
+/* =========================
+SETTINGS LIST
+========================= */
+
+
+.settings-list {
+
+
+padding: 0 20px;
+
+
+}
+
+
+.setting-item {
+
+
+min-height: 72px;
+
+
+display: flex;
+
+
+justify-content: space-between;
+
+
+align-items: center;
+
+
+gap: 20px;
+
+
+border-bottom: 1px solid #eef0f3;
+
+
+}
+
+
+.setting-item:last-child {
+
+
+border-bottom: none;
+
+
+}
+
+
+.setting-content {
+
+
+display: flex;
+
+
+flex-direction: column;
+
+
+gap: 5px;
+
+
+}
+
+
+.setting-content strong {
+
+
+font-size: 13px;
+
+
+}
+
+
+.setting-content span {
+
+
+color: #667085;
+
+
+font-size: 12px;
+
+
+}
+
+
+/* =========================
+CONTROLS
+========================= */
+
+
+.setting-control {
+
+
+min-width: 150px;
+
+
+height: 40px;
+
+
+padding: 0 10px;
+
+
+border: 1px solid #d0d5dd;
+
+
+border-radius: 8px;
+
+
+background: white;
+
+
+color: #172033;
+
+
+font-size: 13px;
+
+
+outline: none;
+
+
+}
+
+
+.setting-control:focus {
+
+
+border-color: #2474ff;
+
+
+}
+
+
+/* =========================
+TOGGLE
+========================= */
+
+
+.toggle {
+
+
+position: relative;
+
+
+width: 44px;
+
+
+height: 24px;
+
+
+flex-shrink: 0;
+
+
+}
+
+
+.toggle input {
+
+
+opacity: 0;
+
+
+width: 0;
+
+
+height: 0;
+
+
+}
+
+
+.toggle-slider {
+
+
+position: absolute;
+
+
+inset: 0;
+
+
+cursor: pointer;
+
+
+background: #d0d5dd;
+
+
+border-radius: 20px;
+
+
+transition: 0.2s;
+
+
+}
+
+
+.toggle-slider::before {
+
+
+content: "";
+
+
+position: absolute;
+
+
+width: 18px;
+
+
+height: 18px;
+
+
+left: 3px;
+
+
+top: 3px;
+
+
+background: white;
+
+
+border-radius: 50%;
+
+
+transition: 0.2s;
+
+
+}
+
+
+.toggle input:checked + .toggle-slider {
+
+
+background: #2474ff;
+
+
+}
+
+
+.toggle input:checked + .toggle-slider::before {
+
+
+transform: translateX(20px);
+
+
+}
+
+
+/* =========================
+SUPPORT
+========================= */
+
+
+.support-grid {
+
+
+display: grid;
+
+
+grid-template-columns:
+    repeat(2, 1fr);
+
+
+gap: 14px;
+
+
+padding: 20px;
+
+
+}
+
+
+.support-card {
+
+
+text-align: left;
+
+
+padding: 18px;
+
+
+border: 1px solid #e5e7eb;
+
+
+border-radius: 10px;
+
+
+background: white;
+
+
+cursor: pointer;
+
+
+display: flex;
+
+
+flex-direction: column;
+
+
+gap: 6px;
+
+
+}
+
+
+.support-card:hover {
+
+
+background: #f8fafc;
+
+
+}
+
+
+.support-card strong {
+
+
+font-size: 13px;
+
+
+color: #172033;
+
+
+}
+
+
+.support-card span {
+
+
+font-size: 12px;
+
+
+color: #667085;
+
+
+}
+
+
+/* =========================
+ACTIONS
+========================= */
+
+
+.actions-section {
+
+
+display: flex;
+
+
+justify-content: flex-end;
+
+
+gap: 10px;
+
+
+padding-bottom: 20px;
+
+
+}
+
+
+.primary-button,
+.secondary-button {
+
+
+border-radius: 9px;
+
+
+padding: 11px 17px;
+
+
+font-size: 14px;
+
+
+font-weight: 600;
+
+
+cursor: pointer;
+
+
+}
+
+
+.primary-button {
+
+
+border: none;
+
+
+background: #2474ff;
+
+
+color: white;
+
+
+}
+
+
+.primary-button:hover {
+
+
+opacity: 0.9;
+
+
+}
+
+
+.secondary-button {
+
+
+border: 1px solid #d0d5dd;
+
+
+background: white;
+
+
+color: #172033;
+
+
+}
+
+
+.secondary-button:hover {
+
+
+background: #f8fafc;
+
+
+}
+
+
+/* =========================
+MOBILE
+========================= */
+
+
+@media (max-width: 700px) {
+
+
+.page-container {
+
+
+    padding: 18px 12px;
+
+
+}
+
+
+
+
+.setting-item {
+
+
+    align-items: flex-start;
+
+
+    flex-direction: column;
+
+
+    padding: 16px 0;
+
+
+}
+
+
+
+
+.setting-control {
+
+
+    width: 100%;
+
+
+}
+
+
+
+
+.support-grid {
+
+
+    grid-template-columns: 1fr;
+
+
+}
+
+
+
+
+.actions-section {
+
+
+    flex-direction: column-reverse;
+
+
+}
+
+
+
+
+.primary-button,
+.secondary-button {
+
+
+    width: 100%;
+
+
+}
+
+
+}

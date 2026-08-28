@@ -1,0 +1,394 @@
+============================================================
+profile.html
+
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>PITMS - Profile</title>
+
+<link
+    rel="stylesheet"
+    href="profile.css">
+
+</head><body><main class="page-container"><!-- PAGE HEADER -->
+
+<section class="page-header">
+
+    <div>
+
+        <p class="page-label">
+            PITMS
+        </p>
+
+        <h1>
+            Profile
+        </h1>
+
+        <p class="page-description">
+            Manage your personal information and user identity.
+        </p>
+
+    </div>
+
+
+    <div class="header-info">
+
+        <span>
+            User Status
+        </span>
+
+        <strong id="userStatus">
+            Active
+        </strong>
+
+    </div>
+
+</section>
+
+
+
+<!-- PROFILE INFORMATION -->
+
+<section class="profile-section">
+
+
+    <div class="section-heading">
+
+        <h2>
+            Personal Information
+        </h2>
+
+        <p>
+            Information about the person operating this account.
+        </p>
+
+    </div>
+
+
+
+    <form id="profileForm">
+
+
+        <div class="form-grid">
+
+
+            <!-- FIRST NAME -->
+
+            <div class="form-group">
+
+                <label for="firstName">
+                    First Name
+                </label>
+
+                <input
+                    id="firstName"
+                    name="firstName"
+                    type="text"
+                    value="Sulaiman"
+                    required>
+
+            </div>
+
+
+
+            <!-- LAST NAME -->
+
+            <div class="form-group">
+
+                <label for="lastName">
+                    Last Name
+                </label>
+
+                <input
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    value="Mahmud"
+                    required>
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value="user@example.com"
+                    required>
+
+            </div>
+
+
+
+            <!-- PHONE -->
+
+            <div class="form-group">
+
+                <label for="phone">
+                    Phone Number
+                </label>
+
+                <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value="+234 800 000 0000">
+
+            </div>
+
+
+
+            <!-- USERNAME -->
+
+            <div class="form-group">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    id="username"
+                    name="username"
+                    type="text"
+                    value="sulaiman"
+                    required>
+
+            </div>
+
+
+
+            <!-- ROLE -->
+
+            <div class="form-group">
+
+                <label for="role">
+                    Role
+                </label>
+
+                <input
+                    id="role"
+                    name="role"
+                    type="text"
+                    value="Business Owner"
+                    readonly>
+
+            </div>
+
+
+
+            <!-- BIO -->
+
+            <div class="form-group full-width">
+
+                <label for="bio">
+                    About
+                </label>
+
+                <textarea
+                    id="bio"
+                    name="bio"
+                    rows="4"
+                    placeholder="Tell us a little about yourself">Business owner using PITMS to manage product inventory and movement.</textarea>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ACTIONS -->
+
+        <div class="form-actions">
+
+            <button
+                type="reset"
+                class="secondary-button">
+
+                Reset
+
+            </button>
+
+
+            <button
+                type="submit"
+                class="primary-button">
+
+                Save Changes
+
+            </button>
+
+        </div>
+
+
+    </form>
+
+</section>
+
+
+
+<!-- USER INFORMATION -->
+
+<section class="details-section">
+
+
+    <div class="section-heading">
+
+        <h2>
+            User Details
+        </h2>
+
+        <p>
+            System information associated with your profile.
+        </p>
+
+    </div>
+
+
+
+    <div class="details-grid">
+
+
+        <div class="detail-card">
+
+            <span>
+                User ID
+            </span>
+
+            <strong>
+                USR-001
+            </strong>
+
+        </div>
+
+
+        <div class="detail-card">
+
+            <span>
+                Role
+            </span>
+
+            <strong>
+                Business Owner
+            </strong>
+
+        </div>
+
+
+        <div class="detail-card">
+
+            <span>
+                Account
+            </span>
+
+            <strong>
+                ACC-001
+            </strong>
+
+        </div>
+
+
+        <div class="detail-card">
+
+            <span>
+                Joined
+            </span>
+
+            <strong>
+                2026-08-01
+            </strong>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- SECURITY SUMMARY -->
+
+<section class="security-section">
+
+
+    <div class="section-heading">
+
+        <h2>
+            Security
+        </h2>
+
+        <p>
+            Basic information about your account security.
+        </p>
+
+    </div>
+
+
+
+    <div class="security-list">
+
+
+        <div class="security-item">
+
+            <div>
+
+                <strong>
+                    Email
+                </strong>
+
+                <span>
+                    Your email is associated with this profile.
+                </span>
+
+            </div>
+
+            <span class="security-status">
+                Verified
+            </span>
+
+        </div>
+
+
+        <div class="security-item">
+
+            <div>
+
+                <strong>
+                    Password
+                </strong>
+
+                <span>
+                    Your password is protected.
+                </span>
+
+            </div>
+
+            <button
+                type="button"
+                class="secondary-button">
+
+                Change Password
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+</main><script src="profile.js"></script></body></html>

@@ -1,0 +1,384 @@
+
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>PITMS - Settings</title>
+
+<link
+    rel="stylesheet"
+    href="settings.css">
+
+</head><body><main class="page-container"><!-- PAGE HEADER -->
+
+<section class="page-header">
+
+    <div>
+
+        <p class="page-label">
+            PITMS
+        </p>
+
+        <h1>
+            Settings
+        </h1>
+
+        <p class="page-description">
+            Control your PITMS preferences and system experience.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- APPEARANCE -->
+
+<section class="settings-section">
+
+
+    <div class="section-heading">
+
+        <h2>
+            Appearance
+        </h2>
+
+        <p>
+            Customize how PITMS looks on your device.
+        </p>
+
+    </div>
+
+
+
+    <div class="settings-list">
+
+
+        <div class="setting-item">
+
+            <div class="setting-content">
+
+                <strong>
+                    Theme
+                </strong>
+
+                <span>
+                    Choose the appearance of the system.
+                </span>
+
+            </div>
+
+
+            <select
+                id="themeSetting"
+                class="setting-control">
+
+                <option value="system">
+                    System Default
+                </option>
+
+                <option value="light">
+                    Light
+                </option>
+
+                <option value="dark">
+                    Dark
+                </option>
+
+            </select>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- SYSTEM SETTINGS -->
+
+<section class="settings-section">
+
+
+    <div class="section-heading">
+
+        <h2>
+            System Preferences
+        </h2>
+
+        <p>
+            Control general behavior of PITMS.
+        </p>
+
+    </div>
+
+
+
+    <div class="settings-list">
+
+
+        <div class="setting-item">
+
+            <div class="setting-content">
+
+                <strong>
+                    Notifications
+                </strong>
+
+                <span>
+                    Receive important system notifications.
+                </span>
+
+            </div>
+
+
+            <label class="toggle">
+
+                <input
+                    type="checkbox"
+                    id="notificationSetting"
+                    checked>
+
+                <span class="toggle-slider">
+
+                </span>
+
+            </label>
+
+        </div>
+
+
+
+        <div class="setting-item">
+
+            <div class="setting-content">
+
+                <strong>
+                    Confirm Important Actions
+                </strong>
+
+                <span>
+                    Ask for confirmation before important records are changed.
+                </span>
+
+            </div>
+
+
+            <label class="toggle">
+
+                <input
+                    type="checkbox"
+                    id="confirmationSetting"
+                    checked>
+
+                <span class="toggle-slider"></span>
+
+            </label>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- LANGUAGE -->
+
+<section class="settings-section">
+
+
+    <div class="section-heading">
+
+        <h2>
+            Language
+        </h2>
+
+        <p>
+            Select the language used by the interface.
+        </p>
+
+    </div>
+
+
+
+    <div class="settings-list">
+
+
+        <div class="setting-item">
+
+            <div class="setting-content">
+
+                <strong>
+                    Interface Language
+                </strong>
+
+                <span>
+                    Choose your preferred system language.
+                </span>
+
+            </div>
+
+
+            <select
+                id="languageSetting"
+                class="setting-control">
+
+                <option value="english">
+                    English
+                </option>
+
+                <option value="hausa">
+                    Hausa
+                </option>
+                <option value="yoroba">
+                    Yoroba
+                </option>
+                <option value="igbo">
+                    Igbo
+                </option>
+                <option value="fulani">
+                    Fulani
+                </option>
+
+            </select>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- SUPPORT -->
+
+<section class="settings-section">
+
+
+    <div class="section-heading">
+
+        <h2>
+            Support & Help
+        </h2>
+
+        <p>
+            Get assistance and learn how to use PITMS.
+        </p>
+
+    </div>
+
+
+
+    <div class="support-grid">
+
+
+        <button
+            type="button"
+            class="support-card"
+            id="helpButton">
+
+            <strong>
+                Help Center
+            </strong>
+
+            <span>
+                Learn how different parts of PITMS work.
+            </span>
+
+        </button>
+
+
+
+        <button
+            type="button"
+            class="support-card"
+            id="supportButton">
+
+            <strong>
+                Support
+            </strong>
+
+            <span>
+                Get assistance with a system problem.
+            </span>
+
+        </button>
+
+
+
+        <button
+            type="button"
+            class="support-card"
+            id="feedbackButton">
+
+            <strong>
+                Feedback
+            </strong>
+
+            <span>
+                Share your experience or report an issue.
+            </span>
+
+        </button>
+
+
+
+        <button
+            type="button"
+            class="support-card"
+            id="aboutButton">
+
+            <strong>
+                About PITMS
+            </strong>
+
+            <span>
+                View information about the system.
+            </span>
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- SAVE SETTINGS -->
+
+<section class="actions-section">
+
+    <button
+        type="button"
+        id="resetSettings"
+        class="secondary-button">
+
+        Reset Settings
+
+    </button>
+
+
+    <button
+        type="button"
+        id="saveSettings"
+        class="primary-button">
+
+        Save Settings
+
+    </button>
+
+</section>
+
+</main><script src="settings.js">
+
+</script>
+</body>
+</html>

@@ -1,11 +1,481 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Export page </title>
-</head>
-<body>
-  
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+
+<title>PITMS - Export Products</title>
+
+
+<link
+    rel="stylesheet"
+    href="export.css">
+
+
+</head><body><main class="page-container"><!-- PAGE HEADER -->
+
+
+<section class="page-header">
+
+
+    <div>
+
+
+        <p class="page-label">
+            PITMS
+        </p>
+
+
+        <h1>
+            Export Products
+        </h1>
+
+
+        <p class="page-description">
+            Record products leaving your business inventory.
+        </p>
+
+
+    </div>
+
+
+
+
+    <div class="header-info">
+
+
+        <span>
+            Export Records
+        </span>
+
+
+        <strong id="exportRecordCount">
+            0
+        </strong>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+
+<!-- EXPORT FORM -->
+
+
+<section class="export-section">
+
+
+
+
+    <div class="section-heading">
+
+
+        <h2>
+            New Export
+        </h2>
+
+
+        <p>
+            Select an active product and record the quantity leaving your inventory.
+        </p>
+
+
+    </div>
+
+
+
+
+
+
+    <form id="exportForm">
+
+
+
+
+        <div class="form-grid">
+
+
+
+
+            <!-- PRODUCT -->
+
+
+            <div class="form-group">
+
+
+                <label for="productId">
+                    Product
+                </label>
+
+
+                <select
+                    id="productId"
+                    name="productId"
+                    required>
+
+
+                    <option value="">
+                        Select active product
+                    </option>
+
+
+                </select>
+
+
+            </div>
+
+
+
+
+
+
+            <!-- AVAILABLE QUANTITY -->
+
+
+            <div class="form-group">
+
+
+                <label>
+                    Available Quantity
+                </label>
+
+
+                <div
+                    class="available-quantity"
+                    id="availableQuantity">
+
+
+                    Select a product
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+            <!-- EXPORT QUANTITY -->
+
+
+            <div class="form-group">
+
+
+                <label for="quantity">
+                    Export Quantity
+                </label>
+
+
+                <input
+                    id="quantity"
+                    name="quantity"
+                    type="number"
+                    min="1"
+                    placeholder="Enter quantity"
+                    required>
+
+
+            </div>
+
+
+
+
+
+
+            <!-- DESTINATION -->
+
+
+            <div class="form-group">
+
+
+                <label for="destination">
+                    Destination / Customer
+                </label>
+
+
+                <input
+                    id="destination"
+                    name="destination"
+                    type="text"
+                    placeholder="Customer or destination"
+                    required>
+
+
+            </div>
+
+
+
+
+
+
+            <!-- REFERENCE -->
+
+
+            <div class="form-group">
+
+
+                <label for="reference">
+                    Reference
+                </label>
+
+
+                <input
+                    id="reference"
+                    name="reference"
+                    type="text"
+                    placeholder="Invoice / receipt reference">
+
+
+            </div>
+
+
+
+
+
+
+            <!-- DATE -->
+
+
+            <div class="form-group">
+
+
+                <label for="exportDate">
+                    Export Date
+                </label>
+
+
+                <input
+                    id="exportDate"
+                    name="exportDate"
+                    type="date"
+                    required>
+
+
+            </div>
+
+
+
+
+
+
+            <!-- NOTE -->
+
+
+            <div class="form-group full-width">
+
+
+                <label for="note">
+                    Note
+                </label>
+
+
+                <textarea
+                    id="note"
+                    name="note"
+                    rows="4"
+                    placeholder="Additional information about this export">
+                </textarea>
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <!-- FORM ACTIONS -->
+
+
+        <div class="form-actions">
+
+
+            <button
+                type="reset"
+                class="secondary-button">
+
+
+                Clear
+
+
+            </button>
+
+
+
+
+            <button
+                type="submit"
+                class="primary-button">
+
+
+                Record Export
+
+
+            </button>
+
+
+        </div>
+
+
+
+
+    </form>
+
+
+</section>
+
+
+
+
+
+
+<!-- RECENT EXPORTS -->
+
+
+<section class="records-section">
+
+
+
+
+    <div class="section-heading">
+
+
+        <div>
+
+
+            <h2>
+                Recent Exports
+            </h2>
+
+
+            <p id="recentExportCount">
+                0 records
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <!-- DESKTOP TABLE -->
+
+
+    <div class="table-container">
+
+
+        <table>
+
+
+            <thead>
+
+
+                <tr>
+
+
+                    <th>
+                        Export ID
+                    </th>
+
+
+                    <th>
+                        Product
+                    </th>
+
+
+                    <th>
+                        Quantity
+                    </th>
+
+
+                    <th>
+                        Destination
+                    </th>
+
+
+                    <th>
+                        Reference
+                    </th>
+
+
+                    <th>
+                        Date
+                    </th>
+
+
+                    <th>
+                        Action
+                    </th>
+
+
+                </tr>
+
+
+            </thead>
+
+
+
+
+            <tbody id="exportTableBody">
+
+
+                <!-- JavaScript inserts records -->
+
+
+            </tbody>
+
+
+        </table>
+
+
+    </div>
+
+
+
+
+
+
+    <!-- MOBILE RECORDS -->
+
+
+    <div
+        class="mobile-record-list"
+        id="mobileExportList">
+
+
+        <!-- JavaScript inserts records -->
+
+
+    </div>
+
+
+
+
+</section>
+
+
+</main><script src="export.js"></script>
+
+
 </body>
 </html>

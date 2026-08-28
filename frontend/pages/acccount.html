@@ -1,0 +1,411 @@
+
+
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>PITMS - Account</title>
+
+<link
+    rel="stylesheet"
+    href="account.css">
+
+</head><body><main class="page-container"><!-- PAGE HEADER -->
+
+<section class="page-header">
+
+    <div>
+
+        <p class="page-label">
+            PITMS
+        </p>
+
+        <h1>
+            Account
+        </h1>
+
+        <p class="page-description">
+            Manage your business account information.
+        </p>
+
+    </div>
+
+
+    <div class="header-info">
+
+        <span>
+            Account Status
+        </span>
+
+        <strong id="accountStatus">
+            Active
+        </strong>
+
+    </div>
+
+</section>
+
+
+
+<!-- BUSINESS INFORMATION -->
+
+<section class="account-section">
+
+
+    <div class="section-heading">
+
+        <h2>
+            Business Information
+        </h2>
+
+        <p>
+            Information about the business using PITMS.
+        </p>
+
+    </div>
+
+
+
+    <form id="accountForm">
+
+
+        <div class="form-grid">
+
+
+            <!-- BUSINESS NAME -->
+
+            <div class="form-group">
+
+                <label for="businessName">
+                    Business Name
+                </label>
+
+                <input
+                    id="businessName"
+                    name="businessName"
+                    type="text"
+                    value="Sulaiman Shoe Store"
+                    required>
+
+            </div>
+
+
+
+            <!-- BUSINESS TYPE -->
+
+            <div class="form-group">
+
+                <label for="businessType">
+                    Business Type
+                </label>
+
+                <select
+                    id="businessType"
+                    name="businessType"
+                    required>
+
+                    <option value="retail">
+                        Retail
+                    </option>
+
+                    <option value="wholesale">
+                        Wholesale
+                    </option>
+
+                    <option value="manufacturer">
+                        Manufacturer
+                    </option>
+
+                    <option value="distribution">
+                        Distribution
+                    </option>
+
+                    <option value="other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- BUSINESS LOCATION -->
+
+            <div class="form-group">
+
+                <label for="businessLocation">
+                    Business Location
+                </label>
+
+                <input
+                    id="businessLocation"
+                    name="businessLocation"
+                    type="text"
+                    value="Wambai Market"
+                    required>
+
+            </div>
+
+
+
+            <!-- MARKET -->
+
+            <div class="form-group">
+
+                <label for="market">
+                    Market
+                </label>
+
+                <input
+                    id="market"
+                    name="market"
+                    type="text"
+                    value="Wambai / Kwari Market">
+
+            </div>
+
+
+
+            <!-- PHONE -->
+
+            <div class="form-group">
+
+                <label for="businessPhone">
+                    Business Phone
+                </label>
+
+                <input
+                    id="businessPhone"
+                    name="businessPhone"
+                    type="tel"
+                    value="+234 800 000 0000">
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label for="businessEmail">
+                    Business Email
+                </label>
+
+                <input
+                    id="businessEmail"
+                    name="businessEmail"
+                    type="email"
+                    value="business@example.com">
+
+            </div>
+
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="form-group full-width">
+
+                <label for="businessDescription">
+                    Business Description
+                </label>
+
+                <textarea
+                    id="businessDescription"
+                    name="businessDescription"
+                    rows="4"
+                    placeholder="Describe the business">
+
+Shoe retail business operating in local markets.
+
+                </textarea>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ACTIONS -->
+
+        <div class="form-actions">
+
+            <button
+                type="reset"
+                class="secondary-button">
+
+                Reset
+
+            </button>
+
+
+            <button
+                type="submit"
+                class="primary-button">
+
+                Save Changes
+
+            </button>
+
+        </div>
+
+
+    </form>
+
+</section>
+
+
+
+<!-- ACCOUNT DETAILS -->
+
+<section class="details-section">
+
+
+    <div class="section-heading">
+
+        <h2>
+            Account Details
+        </h2>
+
+        <p>
+            System information associated with this business account.
+        </p>
+
+    </div>
+
+
+
+    <div class="details-grid">
+
+
+        <div class="detail-card">
+
+            <span>
+                Account ID
+            </span>
+
+            <strong>
+                ACC-001
+            </strong>
+
+        </div>
+
+
+        <div class="detail-card">
+
+            <span>
+                Account Type
+            </span>
+
+            <strong>
+                Business
+            </strong>
+
+        </div>
+
+
+        <div class="detail-card">
+
+            <span>
+                Created
+            </span>
+
+            <strong>
+                2026-08-01
+            </strong>
+
+        </div>
+
+
+        <div class="detail-card">
+
+            <span>
+                Products
+            </span>
+
+            <strong id="productCount">
+                0
+            </strong>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ACCOUNT ACTIVITY -->
+
+<section class="activity-section">
+
+
+    <div class="section-heading">
+
+        <h2>
+            Account Activity
+        </h2>
+
+        <p>
+            Important account-related information.
+        </p>
+
+    </div>
+
+
+
+    <div class="activity-list">
+
+
+        <div class="activity-item">
+
+            <div>
+
+                <strong>
+                    Account Created
+                </strong>
+
+                <span>
+                    Your business account was created.
+                </span>
+
+            </div>
+
+            <time>
+                2026-08-01
+            </time>
+
+        </div>
+
+
+        <div class="activity-item">
+
+            <div>
+
+                <strong>
+                    Account Active
+                </strong>
+
+                <span>
+                    The account is currently active.
+                </span>
+
+            </div>
+
+            <time>
+                Current
+            </time>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+</main><script src="account.js"></script></body></html>

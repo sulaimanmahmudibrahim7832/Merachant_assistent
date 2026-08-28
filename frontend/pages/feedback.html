@@ -1,0 +1,319 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>PITMS - Feedback</title>
+
+<link
+    rel="stylesheet"
+    href="feedback.css">
+
+</head><body><main class="page-container"><!-- PAGE HEADER -->
+
+<section class="page-header">
+
+    <div>
+
+        <p class="page-label">
+            PITMS
+        </p>
+
+        <h1>
+            Feedback
+        </h1>
+
+        <p class="page-description">
+            Share your experience and help improve PITMS.
+        </p>
+
+    </div>
+
+
+    <div class="header-info">
+
+        <span>
+            My Feedback
+        </span>
+
+        <strong id="feedbackCount">
+            0
+        </strong>
+
+    </div>
+
+</section>
+
+
+
+<!-- FEEDBACK FORM -->
+
+<section class="feedback-section">
+
+
+    <div class="section-heading">
+
+        <h2>
+            Send Feedback
+        </h2>
+
+        <p>
+            Tell us about your experience using the system.
+        </p>
+
+    </div>
+
+
+
+    <form id="feedbackForm">
+
+
+        <div class="form-grid">
+
+
+            <!-- FEEDBACK TYPE -->
+
+            <div class="form-group">
+
+                <label for="feedbackType">
+                    Feedback Type
+                </label>
+
+                <select
+                    id="feedbackType"
+                    name="feedbackType"
+                    required>
+
+                    <option value="">
+                        Select feedback type
+                    </option>
+
+                    <option value="general">
+                        General Feedback
+                    </option>
+
+                    <option value="bug">
+                        Report a Problem
+                    </option>
+
+                    <option value="feature">
+                        Feature Request
+                    </option>
+
+                    <option value="improvement">
+                        Improvement
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- RATING -->
+
+            <div class="form-group">
+
+                <label for="rating">
+                    Rating
+                </label>
+
+                <select
+                    id="rating"
+                    name="rating"
+                    required>
+
+                    <option value="">
+                        Select rating
+                    </option>
+
+                    <option value="5">
+                        5 - Excellent
+                    </option>
+
+                    <option value="4">
+                        4 - Good
+                    </option>
+
+                    <option value="3">
+                        3 - Average
+                    </option>
+
+                    <option value="2">
+                        2 - Poor
+                    </option>
+
+                    <option value="1">
+                        1 - Very Poor
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- SUBJECT -->
+
+            <div class="form-group full-width">
+
+                <label for="subject">
+                    Subject
+                </label>
+
+                <input
+                    id="subject"
+                    name="subject"
+                    type="text"
+                    placeholder="Enter feedback subject"
+                    required>
+
+            </div>
+
+
+
+            <!-- MESSAGE -->
+
+            <div class="form-group full-width">
+
+                <label for="message">
+                    Message
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    placeholder="Write your feedback here..."
+                    required></textarea>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ACTIONS -->
+
+        <div class="form-actions">
+
+            <button
+                type="reset"
+                class="secondary-button">
+
+                Clear
+
+            </button>
+
+
+            <button
+                type="submit"
+                class="primary-button">
+
+                Submit Feedback
+
+            </button>
+
+        </div>
+
+
+    </form>
+
+</section>
+
+
+
+<!-- MY FEEDBACK -->
+
+<section class="records-section">
+
+
+    <div class="section-heading">
+
+        <div>
+
+            <h2>
+                My Feedback
+            </h2>
+
+            <p id="recentFeedbackCount">
+                0 submissions
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- DESKTOP TABLE -->
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Feedback ID
+                    </th>
+
+                    <th>
+                        Type
+                    </th>
+
+                    <th>
+                        Subject
+                    </th>
+
+                    <th>
+                        Rating
+                    </th>
+
+                    <th>
+                        Status
+                    </th>
+
+                    <th>
+                        Date
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="feedbackTableBody">
+
+                <!-- JavaScript inserts records -->
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+    <!-- MOBILE RECORDS -->
+
+    <div
+        class="mobile-feedback-list"
+        id="mobileFeedbackList">
+
+        <!-- JavaScript inserts records -->
+
+    </div>
+
+
+</section>
+
+</main><script src="feedback.js">
+  
+</script>
+</body>
+</html>

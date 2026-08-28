@@ -1,414 +1,357 @@
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 
-    <title>PITMS Dashboard</title>
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="dashboard.css">
-</head>
+<title>PITMS - Dashboard</title>
 
-<body>
+<link
+    rel="stylesheet"
+    href="dashboard.css">
 
-    <main class="dashboard">
+</head><body><main class="page-container"><!-- PAGE HEADER -->
 
-        <!-- PAGE HEADER -->
+<section class="page-header">
 
-        <section class="dashboard-header">
+    <div>
 
-            <div>
-                <p class="page-label">PITMS</p>
+        <p class="page-label">
+            PITMS
+        </p>
 
-                <h1>System Overview</h1>
+        <h1>
+            Dashboard
+        </h1>
 
-                <p class="page-description">
-                    Overview of your product records and movement.
-                </p>
-            </div>
+        <p class="page-description">
+            Overview of your business activity and inventory.
+        </p>
 
-            <div class="dashboard-date">
-                <span>Today</span>
-                <strong id="currentDate"></strong>
-            </div>
+    </div>
 
-        </section>
 
+    <div class="business-info">
 
-        <!-- DASHBOARD CARDS -->
+        <span id="businessType">
+            Retail Business
+        </span>
 
-        <section class="dashboard-cards">
+        <strong id="businessName">
+            My Shoe Store
+        </strong>
 
+    </div>
 
-            <!-- PRODUCTS CARD -->
+</section>
 
-            <article class="dashboard-card products-card">
 
-                <div class="card-header">
 
-                    <div class="card-title">
+<!-- SUMMARY CARDS -->
 
-                        <span class="card-icon">
-                            ▦
-                        </span>
+<section class="summary-grid">
 
-                        <div>
-                            <h2>Products</h2>
 
-                            <p>
-                                Current product records
-                            </p>
-                        </div>
+    <article class="summary-card">
 
-                    </div>
+        <span>
+            Active Products
+        </span>
 
-                    <button
-                        class="card-menu"
-                        type="button"
-                        aria-label="Product card options">
+        <strong id="activeProducts">
+            0
+        </strong>
 
-                        ⋮
+        <small>
+            Products activated for your business
+        </small>
 
-                    </button>
+    </article>
 
-                </div>
 
 
-                <div class="main-stat">
+    <article class="summary-card">
 
-                    <span class="stat-label">
-                        Total Products
-                    </span>
+        <span>
+            Current Inventory
+        </span>
 
-                    <strong
-                        class="stat-value"
-                        id="totalProducts">
+        <strong id="currentInventory">
+            0
+        </strong>
 
-                        245
+        <small>
+            Total available quantity
+        </small>
 
-                    </strong>
+    </article>
 
-                </div>
 
 
-                <div class="stat-grid">
+    <article class="summary-card">
 
-                    <div class="stat-box">
+        <span>
+            Total Imports
+        </span>
 
-                        <span>
-                            In Stock
-                        </span>
+        <strong id="totalImports">
+            0
+        </strong>
 
-                        <strong id="stockQuantity">
-                            1,280
-                        </strong>
+        <small>
+            Units received
+        </small>
 
-                    </div>
+    </article>
 
 
-                    <div class="stat-box">
 
-                        <span>
-                            Low Stock
-                        </span>
+    <article class="summary-card">
 
-                        <strong id="lowStock">
-                            18
-                        </strong>
+        <span>
+            Total Exports
+        </span>
 
-                    </div>
+        <strong id="totalExports">
+            0
+        </strong>
 
-                </div>
+        <small>
+            Units leaving inventory
+        </small>
 
+    </article>
 
-                <div class="card-footer">
 
-                    <a
-                        href="products.html"
-                        class="card-link">
+</section>
 
-                        View Product Records →
 
-                    </a>
 
-                </div>
+<!-- BUSINESS MOVEMENT -->
 
-            </article>
+<section class="dashboard-section">
 
 
+    <div class="section-heading">
 
-            <!-- TRACKING CARD -->
+        <div>
 
-            <article class="dashboard-card tracking-card">
+            <h2>
+                Business Movement
+            </h2>
 
-                <div class="card-header">
+            <p>
+                Recent movement of products in your business.
+            </p>
 
-                    <div class="card-title">
+        </div>
 
-                        <span class="card-icon">
-                            ◎
-                        </span>
+        <a href="tracking.html">
+            View Tracking
+        </a>
 
-                        <div>
+    </div>
 
-                            <h2>Tracking</h2>
 
-                            <p>
-                                Product movement
-                            </p>
 
-                        </div>
+    <div class="movement-grid">
 
-                    </div>
 
+        <article class="movement-card">
 
-                    <select
-                        id="trackingPeriod"
-                        class="period-selector">
+            <span>
+                Today
+            </span>
 
-                        <option value="daily">
-                            Daily
-                        </option>
+            <strong id="dailyMovement">
+                0
+            </strong>
 
-                        <option
-                            value="weekly"
-                            selected>
+            <small>
+                Units moved
+            </small>
 
-                            Weekly
+        </article>
 
-                        </option>
 
-                        <option value="monthly">
-                            Monthly
-                        </option>
 
-                    </select>
+        <article class="movement-card">
 
-                </div>
+            <span>
+                This Week
+            </span>
 
+            <strong id="weeklyMovement">
+                0
+            </strong>
 
-                <div class="tracking-summary">
+            <small>
+                Units moved
+            </small>
 
-                    <div class="tracking-item">
+        </article>
 
-                        <div class="tracking-label">
 
-                            <span class="movement-icon import">
-                                ↑
-                            </span>
 
-                            <span>
-                                Import
-                            </span>
+        <article class="movement-card">
 
-                        </div>
+            <span>
+                This Month
+            </span>
 
-                        <strong id="importCount">
-                            125
-                        </strong>
+            <strong id="monthlyMovement">
+                0
+            </strong>
 
-                    </div>
+            <small>
+                Units moved
+            </small>
 
+        </article>
 
-                    <div class="tracking-item">
 
-                        <div class="tracking-label">
+    </div>
 
-                            <span class="movement-icon export">
-                                ↓
-                            </span>
 
-                            <span>
-                                Export
-                            </span>
+</section>
 
-                        </div>
 
-                        <strong id="exportCount">
-                            83
-                        </strong>
 
-                    </div>
+<!-- RECENT ACTIVITY -->
 
+<section class="dashboard-section">
 
-                    <div class="tracking-item total-movement">
 
-                        <span>
-                            Net Movement
-                        </span>
+    <div class="section-heading">
 
-                        <strong id="netMovement">
-                            +42
-                        </strong>
+        <div>
 
-                    </div>
+            <h2>
+                Recent Activity
+            </h2>
 
-                </div>
+            <p>
+                Latest business transactions.
+            </p>
 
+        </div>
 
-                <div class="card-footer">
+        <a href="history.html">
+            View History
+        </a>
 
-                    <a
-                        href="tracking.html"
-                        class="card-link">
+    </div>
 
-                        View Tracking →
 
-                    </a>
 
-                </div>
+    <div
+        class="activity-list"
+        id="activityList">
 
-            </article>
+        <!-- JavaScript inserts activity -->
 
+    </div>
 
 
-            <!-- HISTORY CARD -->
+</section>
 
-            <article class="dashboard-card history-card">
 
-                <div class="card-header">
 
-                    <div class="card-title">
+<!-- QUICK ACTIONS -->
 
-                        <span class="card-icon">
-                            ↶
-                        </span>
+<section class="dashboard-section">
 
-                        <div>
 
-                            <h2>History</h2>
+    <div class="section-heading">
 
-                            <p>
-                                Recent import and export records
-                            </p>
+        <div>
 
-                        </div>
+            <h2>
+                Quick Actions
+            </h2>
 
-                    </div>
+            <p>
+                Access the main business operations.
+            </p>
 
+        </div>
 
-                    <button
-                        class="card-menu"
-                        type="button"
-                        aria-label="History options">
+    </div>
 
-                        ⋮
 
-                    </button>
 
-                </div>
+    <div class="quick-actions">
 
 
-                <div class="activity-list">
+        <a
+            href="products.html"
+            class="action-card">
 
+            <strong>
+                Products
+            </strong>
 
-                    <!-- IMPORT -->
+            <span>
+                Manage your products
+            </span>
 
-                    <div class="activity-item">
+        </a>
 
-                        <span class="activity-icon import">
-                            ↑
-                        </span>
 
-                        <div class="activity-details">
+        <a
+            href="import.html"
+            class="action-card">
 
-                            <strong>
-                                Import
-                            </strong>
+            <strong>
+                Import
+            </strong>
 
-                            <span>
-                                Product A · 50 units
-                            </span>
+            <span>
+                Record incoming products
+            </span>
 
-                        </div>
+        </a>
 
-                        <time>
-                            Today
-                        </time>
 
-                    </div>
+        <a
+            href="export.html"
+            class="action-card">
 
+            <strong>
+                Export
+            </strong>
 
-                    <!-- EXPORT -->
+            <span>
+                Record outgoing products
+            </span>
 
-                    <div class="activity-item">
+        </a>
 
-                        <span class="activity-icon export">
-                            ↓
-                        </span>
 
-                        <div class="activity-details">
+        <a
+            href="tracking.html"
+            class="action-card">
 
-                            <strong>
-                                Export
-                            </strong>
+            <strong>
+                Tracking
+            </strong>
 
-                            <span>
-                                Product B · 20 units
-                            </span>
+            <span>
+                Analyze product movement
+            </span>
 
-                        </div>
+        </a>
 
-                        <time>
-                            Yesterday
-                        </time>
 
-                    </div>
+    </div>
 
 
-                    <!-- IMPORT -->
+</section>
 
-                    <div class="activity-item">
-
-                        <span class="activity-icon import">
-                            ↑
-                        </span>
-
-                        <div class="activity-details">
-
-                            <strong>
-                                Import
-                            </strong>
-
-                            <span>
-                                Product C · 35 units
-                            </span>
-
-                        </div>
-
-                        <time>
-                            2 days ago
-                        </time>
-
-                    </div>
-
-                </div>
-
-
-                <div class="card-footer">
-
-                    <a
-                        href="history.html"
-                        class="card-link">
-
-                        View Full History →
-
-                    </a>
-
-                </div>
-
-            </article>
-
-
-        </section>
-
-    </main>
-
-
-    <script src="dashboard.js"></script>
-
+</main><script src="dashboard.js">
+    
+</script>
 </body>
-
 </html>

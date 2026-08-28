@@ -1,11 +1,320 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
+
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>PITMS - Tracking</title>
+
+<link
+    rel="stylesheet"
+    href="tracking.css">
+
+</head><body><main class="page-container"><!-- PAGE HEADER -->
+
+<section class="page-header">
+
+    <div>
+
+        <p class="page-label">
+            PITMS
+        </p>
+
+        <h1>
+            Product Tracking
+        </h1>
+
+        <p class="page-description">
+            Track product movement across daily, weekly, and monthly periods.
+        </p>
+
+    </div>
+
+
+    <div class="header-info">
+
+        <span>
+            Total Movement
+        </span>
+
+        <strong id="totalMovement">
+            0
+        </strong>
+
+    </div>
+
+</section>
+
+
+
+<!-- PERIOD SELECTOR -->
+
+<section class="tracking-section">
+
+
+    <div class="section-heading">
+
+        <div>
+
+            <h2>
+                Movement Overview
+            </h2>
+
+            <p>
+                Monitor how products move through your business.
+            </p>
+
+        </div>
+
+
+        <div class="period-selector">
+
+            <button
+                type="button"
+                class="period-button active"
+                data-period="daily">
+
+                Daily
+
+            </button>
+
+
+            <button
+                type="button"
+                class="period-button"
+                data-period="weekly">
+
+                Weekly
+
+            </button>
+
+
+            <button
+                type="button"
+                class="period-button"
+                data-period="monthly">
+
+                Monthly
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- MOVEMENT SUMMARY -->
+
+    <div class="movement-summary">
+
+
+        <div class="movement-card">
+
+            <span>
+                Imported
+            </span>
+
+            <strong id="importedQuantity">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="movement-card">
+
+            <span>
+                Exported
+            </span>
+
+            <strong id="exportedQuantity">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="movement-card">
+
+            <span>
+                Net Movement
+            </span>
+
+            <strong id="netMovement">
+                0
+            </strong>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- MOVEMENT VISUALIZATION -->
+
+    <div class="movement-chart-section">
+
+        <div class="chart-header">
+
+            <div>
+
+                <h3>
+                    Product Movement
+                </h3>
+
+                <p id="chartDescription">
+                    Today's product movement
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="chart">
+
+            <div class="chart-row">
+
+                <span>
+                    Import
+                </span>
+
+                <div class="bar-container">
+
+                    <div
+                        class="bar import-bar"
+                        id="importBar">
+
+                    </div>
+
+                </div>
+
+                <strong id="importBarValue">
+                    0
+                </strong>
+
+            </div>
+
+
+
+            <div class="chart-row">
+
+                <span>
+                    Export
+                </span>
+
+                <div class="bar-container">
+
+                    <div
+                        class="bar export-bar"
+                        id="exportBar">
+
+                    </div>
+
+                </div>
+
+                <strong id="exportBarValue">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- PRODUCT MOVEMENT -->
+
+<section class="records-section">
+
+
+    <div class="section-heading">
+
+        <div>
+
+            <h2>
+                Product Movement
+            </h2>
+
+            <p id="movementRecordCount">
+                0 products
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- DESKTOP TABLE -->
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Product
+                    </th>
+
+                    <th>
+                        Product ID
+                    </th>
+
+                    <th>
+                        Imported
+                    </th>
+
+                    <th>
+                        Exported
+                    </th>
+
+                    <th>
+                        Net Movement
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="movementTableBody">
+
+                <!-- JavaScript inserts movement -->
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+    <!-- MOBILE -->
+
+    <div
+        class="mobile-movement-list"
+        id="mobileMovementList">
+
+        <!-- JavaScript inserts movement -->
+
+    </div>
+
+
+</section>
+
+</main><script src="tracking.js">
+
+</script>
 </body>
 </html>

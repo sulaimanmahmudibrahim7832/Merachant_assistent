@@ -1,0 +1,901 @@
+
+
+* {
+  
+  box-sizing: border-box;
+  
+  margin: 0;
+  
+  padding: 0;
+
+
+}
+
+
+body {
+
+
+font-family: Arial, sans-serif;
+
+
+background: #f5f7fb;
+
+
+color: #172033;
+
+
+min-height: 100vh;
+
+
+}
+
+
+.page-container {
+
+
+width: 100%;
+
+
+max-width: 1200px;
+
+
+margin: 0 auto;
+
+
+padding: 24px 20px;
+
+
+}
+
+
+/* =========================
+PAGE HEADER
+========================= */
+
+
+.page-header {
+
+
+display: flex;
+
+
+align-items: flex-start;
+
+
+justify-content: space-between;
+
+
+gap: 20px;
+
+
+margin-bottom: 24px;
+
+
+}
+
+
+.page-label {
+
+
+font-size: 13px;
+
+
+font-weight: 700;
+
+
+letter-spacing: 1px;
+
+
+margin-bottom: 6px;
+
+
+}
+
+
+.page-header h1 {
+
+
+font-size: clamp(
+    1.5rem,
+    4vw,
+    2rem
+);
+
+
+margin-bottom: 6px;
+
+
+}
+
+
+.page-description {
+
+
+color: #667085;
+
+
+font-size: 14px;
+
+
+}
+
+
+.header-info {
+
+
+min-width: 130px;
+
+
+padding: 14px;
+
+
+background: white;
+
+
+border: 1px solid #e5e7eb;
+
+
+border-radius: 10px;
+
+
+display: flex;
+
+
+flex-direction: column;
+
+
+gap: 5px;
+
+
+}
+
+
+.header-info span {
+
+
+color: #667085;
+
+
+font-size: 12px;
+
+
+}
+
+
+.header-info strong {
+
+
+font-size: 22px;
+
+
+}
+
+
+/* =========================
+SECTIONS
+========================= */
+
+
+.export-section,
+.records-section {
+
+
+background: white;
+
+
+border: 1px solid #e5e7eb;
+
+
+border-radius: 14px;
+
+
+overflow: hidden;
+
+
+margin-bottom: 20px;
+
+
+}
+
+
+.section-heading {
+
+
+padding: 18px 20px;
+
+
+border-bottom: 1px solid #e5e7eb;
+
+
+}
+
+
+.section-heading h2 {
+
+
+font-size: 17px;
+
+
+margin-bottom: 4px;
+
+
+}
+
+
+.section-heading p {
+
+
+color: #667085;
+
+
+font-size: 12px;
+
+
+}
+
+
+/* =========================
+FORM
+========================= */
+
+
+#exportForm {
+
+
+padding: 20px;
+
+
+}
+
+
+.form-grid {
+
+
+display: flex;
+
+
+flex-wrap: wrap;
+
+
+gap: 16px;
+
+
+}
+
+
+.form-group {
+
+
+flex: 1 1 300px;
+
+
+display: flex;
+
+
+flex-direction: column;
+
+
+gap: 7px;
+
+
+}
+
+
+.form-group.full-width {
+
+
+flex-basis: 100%;
+
+
+}
+
+
+.form-group label {
+
+
+font-size: 12px;
+
+
+font-weight: 600;
+
+
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+
+width: 100%;
+
+
+border: 1px solid #d0d5dd;
+
+
+border-radius: 9px;
+
+
+background: white;
+
+
+padding: 11px 12px;
+
+
+font-family: inherit;
+
+
+font-size: 14px;
+
+
+outline: none;
+
+
+}
+
+
+.form-group input,
+.form-group select {
+
+
+height: 42px;
+
+
+}
+
+
+.form-group textarea {
+
+
+resize: vertical;
+
+
+min-height: 100px;
+
+
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+
+border-color: #2474ff;
+
+
+}
+
+
+/* =========================
+AVAILABLE QUANTITY
+========================= */
+
+
+.available-quantity {
+
+
+min-height: 42px;
+
+
+display: flex;
+
+
+align-items: center;
+
+
+padding: 11px 12px;
+
+
+border: 1px solid #e5e7eb;
+
+
+border-radius: 9px;
+
+
+background: #f8fafc;
+
+
+color: #667085;
+
+
+font-size: 13px;
+
+
+}
+
+
+/* =========================
+FORM ACTIONS
+========================= */
+
+
+.form-actions {
+
+
+display: flex;
+
+
+justify-content: flex-end;
+
+
+gap: 10px;
+
+
+margin-top: 20px;
+
+
+padding-top: 18px;
+
+
+border-top: 1px solid #eef0f3;
+
+
+}
+
+
+.primary-button,
+.secondary-button {
+
+
+border-radius: 9px;
+
+
+padding: 11px 17px;
+
+
+font-size: 14px;
+
+
+font-weight: 600;
+
+
+cursor: pointer;
+
+
+}
+
+
+.primary-button {
+
+
+border: none;
+
+
+background: #2474ff;
+
+
+color: white;
+
+
+}
+
+
+.primary-button:hover {
+
+
+opacity: 0.9;
+
+
+}
+
+
+.secondary-button {
+
+
+border: 1px solid #d0d5dd;
+
+
+background: white;
+
+
+color: #172033;
+
+
+}
+
+
+.secondary-button:hover {
+
+
+background: #f8fafc;
+
+
+}
+
+
+/* =========================
+TABLE
+========================= */
+
+
+.table-container {
+
+
+width: 100%;
+
+
+overflow-x: auto;
+
+
+}
+
+
+table {
+
+
+width: 100%;
+
+
+min-width: 850px;
+
+
+border-collapse: collapse;
+
+
+}
+
+
+th,
+td {
+
+
+padding: 14px 16px;
+
+
+text-align: left;
+
+
+border-bottom: 1px solid #eef0f3;
+
+
+}
+
+
+th {
+
+
+background: #f8fafc;
+
+
+color: #667085;
+
+
+font-size: 12px;
+
+
+font-weight: 600;
+
+
+}
+
+
+td {
+
+
+font-size: 13px;
+
+
+}
+
+
+.export-id {
+
+
+color: #667085;
+
+
+font-family: monospace;
+
+
+}
+
+
+.product-name {
+
+
+font-weight: 600;
+
+
+}
+
+
+.record-action {
+
+
+border: none;
+
+
+background: transparent;
+
+
+cursor: pointer;
+
+
+font-size: 18px;
+
+
+padding: 4px 8px;
+
+
+border-radius: 6px;
+
+
+}
+
+
+.record-action:hover {
+
+
+background: #f2f4f7;
+
+
+}
+
+
+/* =========================
+MOBILE RECORDS
+========================= */
+
+
+.mobile-record-list {
+
+
+display: none;
+
+
+}
+
+
+.mobile-record {
+
+
+padding: 16px;
+
+
+border-bottom: 1px solid #eef0f3;
+
+
+}
+
+
+.mobile-record-header {
+
+
+display: flex;
+
+
+justify-content: space-between;
+
+
+gap: 12px;
+
+
+margin-bottom: 12px;
+
+
+}
+
+
+.mobile-record-title {
+
+
+display: flex;
+
+
+flex-direction: column;
+
+
+gap: 4px;
+
+
+}
+
+
+.mobile-record-title strong {
+
+
+font-size: 14px;
+
+
+}
+
+
+.mobile-record-title span {
+
+
+color: #667085;
+
+
+font-family: monospace;
+
+
+font-size: 11px;
+
+
+}
+
+
+.mobile-record-details {
+
+
+display: grid;
+
+
+grid-template-columns: 1fr 1fr;
+
+
+gap: 12px;
+
+
+}
+
+
+.mobile-detail {
+
+
+display: flex;
+
+
+flex-direction: column;
+
+
+gap: 4px;
+
+
+}
+
+
+.mobile-detail span {
+
+
+color: #667085;
+
+
+font-size: 11px;
+
+
+}
+
+
+.mobile-detail strong {
+
+
+font-size: 13px;
+
+
+}
+
+
+/* =========================
+EMPTY STATE
+========================= */
+
+
+.empty-state {
+
+
+padding: 40px 20px;
+
+
+text-align: center;
+
+
+color: #667085;
+
+
+font-size: 14px;
+
+
+}
+
+
+/* =========================
+MOBILE
+========================= */
+
+
+@media (max-width: 700px) {
+
+
+.page-container {
+
+
+    padding: 18px 12px;
+
+
+}
+
+
+
+
+.page-header {
+
+
+    flex-direction: column;
+
+
+}
+
+
+
+
+.header-info {
+
+
+    width: 100%;
+
+
+}
+
+
+
+
+.form-group {
+
+
+    flex-basis: 100%;
+
+
+}
+
+
+
+
+.form-actions {
+
+
+    flex-direction: column-reverse;
+
+
+}
+
+
+
+
+.primary-button,
+.secondary-button {
+
+
+    width: 100%;
+
+
+}
+
+
+
+
+.table-container {
+
+
+    display: none;
+
+
+}
+
+
+
+
+.mobile-record-list {
+
+
+    display: block;
+
+
+}
+
+
+
+
+.records-section,
+.export-section {
+
+
+    border-radius: 12px;
+
+
+}
+
+
+}
+

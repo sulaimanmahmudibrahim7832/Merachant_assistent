@@ -1,11 +1,976 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product page </title>
-</head>
-<body>
-  
-</body>
-</html>
+
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>PITMS - Products</title>
+
+<link rel="stylesheet" href="products.css">
+
+</head><body><main class="page-container"><!-- PAGE HEADER -->
+
+<section class="page-header">
+
+    <div>
+
+        <p class="page-label">
+            PITMS
+        </p>
+
+        <h1>
+            Products
+        </h1>
+
+        <p class="page-description">
+            Find products, activate them for your business,
+            and manage your available inventory.
+        </p>
+
+    </div>
+
+
+    <div class="header-info">
+
+        <span>
+            Active Products
+        </span>
+
+        <strong id="activeProductCount">
+            0
+        </strong>
+
+    </div>
+
+</section>
+
+
+
+<!-- PRODUCT CATALOGUE -->
+
+<section class="catalogue-section">
+
+
+    <div class="section-heading">
+
+        <div>
+
+            <h2>
+                Product Catalogue
+            </h2>
+
+            <p>
+                Products available for activation in PITMS.
+            </p>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="primary-button"
+            id="showAddProductButton">
+
+            Add New Product
+
+        </button>
+
+    </div>
+
+
+
+    <!-- SEARCH -->
+
+    <div class="catalogue-tools">
+
+        <div class="search-group">
+
+            <label for="productSearch">
+                Search Products
+            </label>
+
+            <input
+                id="productSearch"
+                type="search"
+                placeholder="Search by product name or ID">
+
+        </div>
+
+
+        <div class="filter-group">
+
+            <label for="categoryFilter">
+                Category
+            </label>
+
+            <select id="categoryFilter">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- AVAILABLE PRODUCTS -->
+
+    <div
+        class="catalogue-grid"
+        id="catalogueGrid">
+
+        <!-- JavaScript inserts catalogue products -->
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ACTIVE PRODUCTS -->
+
+<section class="active-section">
+
+
+    <div class="section-heading">
+
+        <div>
+
+            <h2>
+                My Active Products
+            </h2>
+
+            <p>
+                Products currently activated for your business.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div
+        class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Product ID
+                    </th>
+
+                    <th>
+                        Product
+                    </th>
+
+                    <th>
+                        Category
+                    </th>
+
+                    <th>
+                        Quantity
+                    </th>
+
+                    <th>
+                        Status
+                    </th>
+
+                    <th>
+                        Action
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="activeProductTable">
+
+                <!-- JavaScript inserts active products -->
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+    <div
+        class="mobile-product-list"
+        id="mobileProductList">
+
+        <!-- JavaScript inserts mobile records -->
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ADD PRODUCT MODAL -->
+
+<div
+    class="modal"
+    id="addProductModal"
+    aria-hidden="true">
+
+
+    <div class="modal-content">
+
+
+        <div class="modal-header">
+
+            <div>
+
+                <h2>
+                    Add New Product
+                </h2>
+
+                <p>
+                    Add a product to the PITMS catalogue.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="close-button"
+                id="closeAddProductButton"
+                aria-label="Close">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+
+        <form id="addProductForm">
+
+
+            <div class="form-group">
+
+                <label for="newProductName">
+                    Product Name
+                </label>
+
+                <input
+                    id="newProductName"
+                    type="text"
+                    placeholder="Enter product name"
+                    required>
+
+            </div>
+
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label for="newProductCategory">
+                        Category
+                    </label>
+
+                    <input
+                        id="newProductCategory"
+                        type="text"
+                        placeholder="e.g. Sneakers"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="newProductBrand">
+                        Brand
+                    </label>
+
+                    <input
+                        id="newProductBrand"
+                        type="text"
+                        placeholder="Enter brand">
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label for="newProductDescription">
+                    Description
+                </label>
+
+                <textarea
+                    id="newProductDescription"
+                    rows="3"
+                    placeholder="Describe the product">
+                </textarea>
+
+            </div>
+
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    id="cancelAddProductButton">
+
+                    Cancel
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="primary-button">
+
+                    Add Product
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+</div>
+
+</main><script src="products.js"></script></body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

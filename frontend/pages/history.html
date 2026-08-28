@@ -1,11 +1,231 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>History</title>
-</head>
-<body>
-  
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>PITMS - History</title>
+
+<link
+    rel="stylesheet"
+    href="history.css">
+
+</head><body><main class="page-container"><!-- PAGE HEADER -->
+
+<section class="page-header">
+
+    <div>
+
+        <p class="page-label">
+            PITMS
+        </p>
+
+        <h1>
+            History
+        </h1>
+
+        <p class="page-description">
+            View the overall activity and records of your business.
+        </p>
+
+    </div>
+
+
+    <div class="header-info">
+
+        <span>
+            Total Activities
+        </span>
+
+        <strong id="historyCount">
+            0
+        </strong>
+
+    </div>
+
+</section>
+
+
+
+<!-- FILTER SECTION -->
+
+<section class="filter-section">
+
+
+    <div class="section-heading">
+
+        <div>
+
+            <h2>
+                Activity History
+            </h2>
+
+            <p>
+                Review what has happened in your business over time.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="filter-controls">
+
+
+        <div class="filter-group">
+
+            <label for="activityType">
+                Activity
+            </label>
+
+            <select id="activityType">
+
+                <option value="all">
+                    All Activities
+                </option>
+
+                <option value="import">
+                    Imports
+                </option>
+
+                <option value="export">
+                    Exports
+                </option>
+
+                <option value="product">
+                    Products
+                </option>
+
+                <option value="account">
+                    Account
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <div class="filter-group">
+
+            <label for="historyDate">
+                Date
+            </label>
+
+            <input
+                id="historyDate"
+                type="date">
+
+        </div>
+
+
+
+        <button
+            type="button"
+            class="clear-filter-button"
+            id="clearFilters">
+
+            Clear Filters
+
+        </button>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- HISTORY RECORDS -->
+
+<section class="records-section">
+
+
+    <div class="records-header">
+
+        <div>
+
+            <h2>
+                Recent Activity
+            </h2>
+
+            <p id="visibleHistoryCount">
+                0 activities
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- DESKTOP TABLE -->
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Activity ID
+                    </th>
+
+                    <th>
+                        Activity
+                    </th>
+
+                    <th>
+                        Description
+                    </th>
+
+                    <th>
+                        Reference
+                    </th>
+
+                    <th>
+                        Date
+                    </th>
+
+                    <th>
+                        Action
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="historyTableBody">
+
+                <!-- JavaScript inserts records -->
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+    <!-- MOBILE RECORDS -->
+
+    <div
+        class="mobile-history-list"
+        id="mobileHistoryList">
+
+        <!-- JavaScript inserts records -->
+
+    </div>
+
+
+</section>
+
+</main><script src="history.js">
+
+</script>
 </body>
 </html>

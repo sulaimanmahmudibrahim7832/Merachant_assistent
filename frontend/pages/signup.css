@@ -1,0 +1,406 @@
+●{
+
+
+ box-sizing: border-box;
+
+
+ margin: 0;
+
+
+ padding: 0;
+
+
+}
+body {
+font-family: Arial, sans-serif;
+
+
+background: #f5f7fb;
+
+
+color: #172033;
+
+
+min-height: 100vh;
+
+
+}
+.auth-container {
+width: 100%;
+
+
+max-width: 720px;
+
+
+margin: 0 auto;
+
+
+padding: 40px 20px;
+
+
+}
+/* ========================= BRAND ========================= */
+.brand-section {
+text-align: center;
+
+
+margin-bottom: 28px;
+
+
+}
+.brand-label {
+font-size: 13px;
+
+
+font-weight: 700;
+
+
+letter-spacing: 2px;
+
+
+margin-bottom: 10px;
+
+
+}
+.brand-section h1 {
+font-size: clamp(
+    1.6rem,
+    4vw,
+    2.2rem
+);
+
+
+margin-bottom: 8px;
+
+
+}
+.brand-section p:last-child {
+max-width: 540px;
+
+
+margin: 0 auto;
+
+
+color: #667085;
+
+
+font-size: 14px;
+
+
+line-height: 1.6;
+
+
+}
+/* ========================= CARD ========================= */
+.signup-card {
+background: white;
+
+
+border: 1px solid #e5e7eb;
+
+
+border-radius: 14px;
+
+
+padding: 26px;
+
+
+}
+.card-heading {
+margin-bottom: 24px;
+
+
+}
+.card-heading h2 {
+font-size: 20px;
+
+
+margin-bottom: 5px;
+
+
+}
+.card-heading p {
+color: #667085;
+
+
+font-size: 13px;
+
+
+}
+/* ========================= FORM SECTIONS ========================= */
+.form-section {
+padding-bottom: 24px;
+
+
+margin-bottom: 24px;
+
+
+border-bottom: 1px solid #eef0f3;
+
+
+}
+.form-section h3 {
+font-size: 14px;
+
+
+margin-bottom: 16px;
+
+
+}
+.form-grid {
+display: flex;
+
+
+flex-wrap: wrap;
+
+
+gap: 16px;
+
+
+margin-bottom: 16px;
+
+
+}
+.form-grid .form-group {
+flex: 1 1 250px;
+
+
+}
+.form-group {
+display: flex;
+
+
+flex-direction: column;
+
+
+gap: 7px;
+
+
+}
+.form-group label {
+font-size: 12px;
+
+
+font-weight: 600;
+
+
+}
+.form-group input, .form-group select, .form-group textarea {
+width: 100%;
+
+
+border: 1px solid #d0d5dd;
+
+
+border-radius: 9px;
+
+
+background: white;
+
+
+padding: 11px 12px;
+
+
+font-family: inherit;
+
+
+font-size: 14px;
+
+
+outline: none;
+
+
+}
+.form-group input, .form-group select {
+height: 42px;
+
+
+}
+.form-group textarea {
+resize: vertical;
+
+
+min-height: 90px;
+
+
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+border-color: #2474ff;
+
+
+}
+/* ========================= TERMS ========================= */
+.terms-group {
+margin-bottom: 18px;
+
+
+}
+.terms-group label {
+display: flex;
+
+
+align-items: flex-start;
+
+
+gap: 9px;
+
+
+color: #475467;
+
+
+font-size: 12px;
+
+
+line-height: 1.5;
+
+
+}
+.terms-group input {
+margin-top: 2px;
+
+
+}
+/* ========================= MESSAGE ========================= */
+.form-message {
+min-height: 18px;
+
+
+margin-bottom: 10px;
+
+
+font-size: 12px;
+
+
+}
+/* ========================= BUTTON ========================= */
+.primary-button {
+width: 100%;
+
+
+height: 44px;
+
+
+border: none;
+
+
+border-radius: 9px;
+
+
+background: #2474ff;
+
+
+color: white;
+
+
+font-size: 14px;
+
+
+font-weight: 600;
+
+
+cursor: pointer;
+
+
+}
+.primary-button:hover {
+opacity: 0.9;
+
+
+}
+/* ========================= SIGN IN ========================= */
+.signin-link {
+display: flex;
+
+
+justify-content: center;
+
+
+gap: 5px;
+
+
+margin-top: 20px;
+
+
+color: #667085;
+
+
+font-size: 13px;
+
+
+}
+.signin-link a {
+color: #2474ff;
+
+
+font-weight: 600;
+
+
+text-decoration: none;
+
+
+}
+/* ========================= MOBILE ========================= */
+@media (max-width: 600px) {
+.auth-container {
+
+
+    padding: 24px 12px;
+
+
+}
+
+
+
+
+.signup-card {
+
+
+    padding: 20px 16px;
+
+
+    border-radius: 12px;
+
+
+}
+
+
+
+
+.form-grid {
+
+
+    flex-direction: column;
+
+
+}
+
+
+
+
+.form-grid .form-group {
+
+
+    flex-basis: 100%;
+
+
+}
+
+
+
+
+.signin-link {
+
+
+    flex-direction: column;
+
+
+    align-items: center;
+
+
+    gap: 4px;
+
+
+}
+
+
+}
