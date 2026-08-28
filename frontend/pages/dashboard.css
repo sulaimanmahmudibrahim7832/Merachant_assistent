@@ -25,7 +25,7 @@ color: #172033;
 
 
 min-height: 100vh;
-
+margin-left: 20vw;
 
 }
 
@@ -653,7 +653,9 @@ MOBILE
 
 
 }
-
+body{
+    margin-left: 0;
+}
 
 
 
@@ -677,6 +679,7 @@ MOBILE
 
 
     padding: 18px 12px;
+    margin-right: 20vw;
 
 
 }

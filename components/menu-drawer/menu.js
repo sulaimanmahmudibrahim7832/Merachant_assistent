@@ -1,21 +1,12 @@
 
-
         const menuDrawer = document.getElementById("menuDrawer");
-
-
         const menuOpen = document.getElementById("menuOpen");
-
-
         const drawerClose = document.getElementById("drawerClose");
-
-
         const drawerOverlay =  document.getElementById("drawerOverlay");
-
-
         // Open drawer
 
 
-        menuOpen.addEventListener("click", function () {
+        menuOpen.addEventListener("click", ()=> {
 
 
             menuDrawer.classList.add("open");
@@ -32,7 +23,7 @@
         // Close drawer
 
 
-        drawerClose.addEventListener("click", function () {
+        drawerClose.addEventListener("click",  ()=> {
 
 
             closeDrawer();
@@ -46,7 +37,7 @@
         // Close when overlay is clicked
 
 
-        drawerOverlay.addEventListener("click", function () {
+        drawerOverlay.addEventListener("click",  ()=> {
 
 
             closeDrawer();
@@ -77,7 +68,7 @@
         // Close drawer with Escape key
 
 
-        document.addEventListener("keydown", function (event) {
+        document.addEventListener("keydown",  event=> {
 
 
             if (event.key === "Escape") {
@@ -103,7 +94,7 @@
 
 
 
-        menuItems.forEach(function (item) {
+        menuItems.forEach( item=>{
 
 
             item.addEventListener("click", function () {
@@ -135,7 +126,7 @@
 
 
 
-        signOut.addEventListener("click", function () {
+        signOut.addEventListener("click",  ()=> {
 
 
             alert("Sign out action will be connected later.");
@@ -179,7 +170,7 @@ const quickMenuButton = document.getElementById("quickMenuButton");
 
     // Open / close quick menu
 
-    quickMenuButton.addEventListener("click", function (event) {
+    quickMenuButton.addEventListener("click",  event=> {
 
         event.stopPropagation();
 
@@ -196,7 +187,7 @@ const quickMenuButton = document.getElementById("quickMenuButton");
 
     // Close when clicking outside
 
-    document.addEventListener("click", function () {
+    document.addEventListener("click", ()=> {
 
         quickMenuContent.classList.remove("show");
 
@@ -212,7 +203,7 @@ const quickMenuButton = document.getElementById("quickMenuButton");
 
     quickMenuContent.addEventListener(
         "click",
-        function (event) {
+         event=>{
 
             event.stopPropagation();
 
@@ -224,7 +215,7 @@ const quickMenuButton = document.getElementById("quickMenuButton");
 
     document.addEventListener(
         "keydown",
-        function (event) {
+        event=> {
 
             if (event.key === "Escape") {
 
@@ -245,7 +236,7 @@ const quickMenuButton = document.getElementById("quickMenuButton");
 
     quickSignOut.addEventListener(
         "click",
-        function () {
+         ()=> {
 
             alert(
                 "Sign out will be connected to authentication later."

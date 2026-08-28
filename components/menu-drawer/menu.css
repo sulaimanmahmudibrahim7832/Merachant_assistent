@@ -508,6 +508,8 @@
            RESPONSIVE
         ========================== */
 
+        
+
 
         @media (min-width: 900px) {
 
@@ -534,7 +536,7 @@
 
 
             .header {
-                margin-left: 320px;
+                margin-left: 0;
             }
 
 
