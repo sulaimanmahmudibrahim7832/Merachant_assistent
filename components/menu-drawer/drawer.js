@@ -1,6 +1,11 @@
 let drawerHTML = '';
 const aside = document.getElementById("menuDrawer");
 const header = document.querySelector(".header");
+const user ={
+    name: "Sulaiman Mahmud Ibrahim",
+    accountType: "individual",
+    avater:"SM"
+}
 let headerHTML = `
      <div class="header-left">
          <button
@@ -188,14 +193,14 @@ let asideHTML = `
     <div class="drawer-user">
         <div class="user-information">
             <div class="user-avatar">
-                TAD
+                ${user.avater}
             </div>
             <div class="user-details">
                 <strong>
-                    Tahir AbdulKadir Danwawo
+                    ${user.name}
                 </strong>
                 <span>
-                    Retailer
+                    ${user.accountType}
                 </span>
             </div>
         </div>
