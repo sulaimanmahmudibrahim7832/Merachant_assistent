@@ -88,18 +88,11 @@
         // Close drawer after selecting a page on mobile
 
 
-        const menuItems =
-            document.querySelectorAll(".menu-item");
-
-
-
-
-        menuItems.forEach( item=>{
-
-
-            item.addEventListener("click", function () {
-
-
+const menuItems = document.querySelectorAll(".menu-item");
+menuItems[0].classList.add("active");
+menuItems.forEach(item => {
+            item.addEventListener("click",  ()=> {
+               
                 if (window.innerWidth < 900) {
 
 
@@ -107,7 +100,10 @@
 
 
                 }
-
+             
+             
+             
+             
 
             });
 
@@ -115,13 +111,21 @@
         });
 
 
+// active page / activation 
+const currentPage = window.location.pathname.split("/").pop();
+//console.log(currentPage);
+const drawerLinks = document.querySelectorAll("a");
 
-
+drawerLinks.forEach(link => {
+    const linkedPage = link.getAttribute("href");
+    if (currentPage === linkedPage) {
+        
+    }
+})
         // Example sign-out action
 
 
-        const signOut =
-            document.getElementById("signOut");
+        const signOut =  document.getElementById("signOut");
 
 
 
