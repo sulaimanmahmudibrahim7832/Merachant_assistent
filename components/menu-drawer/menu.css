@@ -520,7 +520,7 @@
              */
 
 
-            .menu-drawer {
+          /*  .menu-drawer {
                 transform: translateX(0);
             }
 
@@ -543,7 +543,14 @@
             .main {
                 margin-left: 320px;
                 max-width: none;
+            }*/
+            .header{
+                width:100vw;
             }
+            body{
+                margin-left: 0;
+            }
+
         }
 
 

@@ -89,7 +89,7 @@
 
 
 const menuItems = document.querySelectorAll(".menu-item");
-menuItems[0].classList.add("active");
+menuItems[0].classList.remove("active");
 menuItems.forEach(item => {
             item.addEventListener("click",  ()=> {
                
@@ -110,16 +110,14 @@ menuItems.forEach(item => {
 
         });
 
-
 // active page / activation 
 const currentPage = window.location.pathname.split("/").pop();
 //console.log(currentPage);
-const drawerLinks = document.querySelectorAll("a");
-
+const drawerLinks = document.querySelectorAll("aside a");
 drawerLinks.forEach(link => {
-    const linkedPage = link.getAttribute("href");
+    const linkedPage = link.getAttribute("href").split("/").pop();
     if (currentPage === linkedPage) {
-        link.classList.add("active");
+         link.classList.add("active");
      }
 });
         // Example sign-out action
