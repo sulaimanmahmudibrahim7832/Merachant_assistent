@@ -119,9 +119,9 @@ const drawerLinks = document.querySelectorAll("a");
 drawerLinks.forEach(link => {
     const linkedPage = link.getAttribute("href");
     if (currentPage === linkedPage) {
-        
-    }
-})
+        link.classList.add("active");
+     }
+});
         // Example sign-out action
 
 
